@@ -10,4 +10,4 @@
 
 **LinkedIn:** https://www.linkedin.com/in/nmn0204
 
-This site is built from the private source repository [stalisnguyen/CV-2026-source](https://github.com/stalisnguyen/CV-2026-source).
+This repository is the source and the site. GitHub Pages serves `main` from the repository root. To update the CV, edit `index.html`. To update the AI portfolio, edit the files in `portfolio/`. A push to `main` redeploys the site.
