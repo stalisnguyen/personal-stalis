@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 # One-time split: keep history in stalisnguyen/CV-2026-source and serve the
-# site from a new public stalisnguyen/CV-2026 repository.
+# site from a new public stalisnguyen/personal-stalis repository.
 #
 # Run this as the GitHub user stalisnguyen (repo admin and permission to
 # create repositories). The Cursor cloud agent token cannot do these steps.
 #
 #   gh auth login
 #   ./scripts/split_public_site.sh
-#   # confirm https://stalisnguyen.github.io/CV-2026/ in EN, VI, and ZH
+#   # confirm https://stalisnguyen.github.io/personal-stalis/ in EN, VI, and ZH
 #   ./scripts/split_public_site.sh --make-private
 set -euo pipefail
 
 OWNER=stalisnguyen
 SOURCE_NAME=CV-2026-source
-PUBLIC_NAME=CV-2026
+PUBLIC_NAME=personal-stalis
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 MAKE_PRIVATE=0
 if [[ "${1:-}" == "--make-private" ]]; then
@@ -84,7 +84,7 @@ else
   if ! gh repo create "$OWNER/$PUBLIC_NAME" \
     --public \
     --description "Public CV site for Nguyen Nguyen" \
-    --homepage "https://stalisnguyen.github.io/CV-2026/" \
+    --homepage "https://stalisnguyen.github.io/personal-stalis/" \
     --disable-wiki
   then
     echo "Creating ${OWNER}/${PUBLIC_NAME} failed." >&2
@@ -121,7 +121,7 @@ if ! gh api "repos/${OWNER}/${PUBLIC_NAME}/pages" >/dev/null 2>&1; then
 {"build_type":"legacy","source":{"branch":"main","path":"/"}}
 EOF
 fi
-echo "Pages source: main branch, root. Site: https://stalisnguyen.github.io/CV-2026/"
+echo "Pages source: main branch, root. Site: https://stalisnguyen.github.io/personal-stalis/"
 
 key_file="${HOME}/.ssh/cv-2026-pages"
 if [[ ! -f "$key_file" ]]; then
@@ -136,7 +136,7 @@ gh secret set CV_PAGES_DEPLOY_KEY --repo "$OWNER/$SOURCE_NAME" < "$key_file"
 echo "Stored the deploy key as Actions secret CV_PAGES_DEPLOY_KEY on ${SOURCE_NAME}."
 echo "A deploy key added by gh is removed if you revoke that gh login. You can instead add ${key_file}.pub in the public repository under Settings, Deploy keys, with write access."
 echo
-echo "Next: open https://stalisnguyen.github.io/CV-2026/ in English, Vietnamese, and Chinese, on a desktop width and at 375px."
+echo "Next: open https://stalisnguyen.github.io/personal-stalis/ in English, Vietnamese, and Chinese, on a desktop width and at 375px."
 echo "Print or Save as PDF should still be 2 A4 pages."
 echo "After that looks right, run: ./scripts/split_public_site.sh --make-private"
 echo "Future Cursor cloud agents must use the repository ${OWNER}/${SOURCE_NAME}."
