@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Push the built site to the public repository stalisnguyen/CV-2026.
+# Push the built site to the public repository stalisnguyen/personal-stalis.
 # Authentication is an SSH deploy key with write access on that repository.
 # Set DEPLOY_KEY to the private key text, or DEPLOY_KEY_FILE to its path.
 set -euo pipefail
 
 DIST=${1:-dist}
 OWNER=stalisnguyen
-REPO=CV-2026
+REPO=personal-stalis
 REMOTE="git@github.com:${OWNER}/${REPO}.git"
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 
