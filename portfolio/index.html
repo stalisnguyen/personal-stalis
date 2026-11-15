@@ -34,11 +34,14 @@ a{color:inherit;text-decoration:none}
 
 /* nav */
 nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);background:rgba(7,8,12,.66);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em;flex:none;white-space:nowrap}
+.navcta{flex:none}
 .logo i{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 200deg,#a78bfa,#60a5fa,#34d399,#fbbf24,#a78bfa);display:block;box-shadow:0 0 22px rgba(167,139,250,.45)}
-nav ul{display:flex;gap:26px;list-style:none;font-size:14px;color:var(--muted)}
+nav ul{display:flex;gap:26px;list-style:none;font-size:14px;color:var(--muted);min-width:0}
+nav ul a{white-space:nowrap}
 nav ul a:hover{color:var(--text)}
+@media (max-width:1180px){nav ul{gap:14px;font-size:13px}}
 .navcta{font-size:13.5px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line2);transition:.2s}
 .navcta:hover{background:#fff;color:#000}
 
@@ -421,6 +424,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
 .more-body .grid.more-cards{margin-top:6px}
 @media (min-width:901px){
   .more-cards>.card:last-child:nth-child(odd){grid-column:1 / -1;width:calc((100% - 22px) / 2);justify-self:center}
+  #history .grid>.card,#coffee .grid>.card{grid-column:1 / -1;width:calc((100% - 22px) / 2);justify-self:center}
 }
 @media (max-width:560px){
   .more-cards .head{flex-wrap:wrap;row-gap:8px}
@@ -447,6 +451,8 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
       <li><a href="#why">Why I build</a></li>
       <li><a href="#echolis">AI apps</a></li>
       <li><a href="#learning">Learning</a></li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#coffee">Coffee</a></li>
       <li><a href="#games">Games</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#services">Work with me</a></li>
@@ -482,7 +488,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
     <div class="stats rv">
       <div class="stat"><div class="k">10+ yrs</div><div class="v">Lifecycle &amp; Platform Strategy</div></div>
       <div class="stat"><div class="k">Ex-Binance</div><div class="v">Global lifecycle, CRM &amp; loyalty</div></div>
-      <div class="stat"><div class="k">10 live</div><div class="v">Products built &amp; shipped</div></div>
+      <div class="stat"><div class="k">11 live</div><div class="v">Products built &amp; shipped</div></div>
       <div class="stat"><div class="k">Web + iOS</div><div class="v">Echolis on the App Store</div></div>
     </div>
   </div>
@@ -506,7 +512,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
   </div>
   <div class="wrap">
     <div class="how rv">
-      <div class="how-h"><div class="eyebrow">How I build</div><p>One process for all ten products. I own every step and work with AI agents on content, code and tests.</p></div>
+      <div class="how-h"><div class="eyebrow">How I build</div><p>One process for all twelve products. I own every step and work with AI agents on content, code and tests.</p></div>
       <ol class="steps">
         <li><b>Define the user</b><span>Who they are, what they need and how progress is measured.</span></li>
         <li><b>Spec with guardrails</b><span>Answer validators and safety rules. Nothing ships until it passes.</span></li>
@@ -525,6 +531,8 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
       <button type="button" class="cat" data-cat="all" aria-pressed="true">All</button>
       <button type="button" class="cat" data-cat="ai" aria-pressed="false">AI apps</button>
       <button type="button" class="cat" data-cat="learning" aria-pressed="false">Learning</button>
+      <button type="button" class="cat" data-cat="history" aria-pressed="false">History</button>
+      <button type="button" class="cat" data-cat="coffee" aria-pressed="false">Coffee</button>
       <button type="button" class="cat" data-cat="games" aria-pressed="false">Games</button>
       <button type="button" class="cat" data-cat="tools" aria-pressed="false">Tools</button>
     </div>
@@ -952,6 +960,77 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
   </div>
 </section>
 
+<section id="history" class="more-products" data-cat-section="history">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">History</div>
+      <h2>Vietnam's history, <span class="serif">on one map.</span></h2>
+      <p class="sub">Việt Sử Toàn Đồ is live and still being built. Later periods are marked Coming.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card" style="--c1:rgba(232,168,74,.62);--c2:rgba(20,160,150,.4);--c1s:#f0b56a;--glow:rgba(232,168,74,.42)">
+        <div class="shot">
+          <div class="fb">🗺️</div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><em>viet-su.vercel.app</em></div><img src="img/viet-su.jpg" alt="Việt Sử Toàn Đồ in English: the opening screen, “800,000 years told on one map,” with the Đông Sơn, Sa Huỳnh and Đồng Nai zones" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">🗺️</div><div><h3>Việt Sử Toàn Đồ</h3><small>The history of Vietnam, told on a map · English &amp; Vietnamese</small></div></div>
+            <span class="status-row"><span class="status live">LIVE</span><span class="status dev">IN PROGRESS</span></span>
+          </div>
+          <p class="desc">An interactive map of Vietnamese history, in English and Vietnamese. Scroll and the map changes with each period and flies to each site. Tap a beam of light on the map to jump straight to a site. The opening line is "800,000 years told on one map."</p>
+          <ul class="feats">
+            <li><b>Stone Age to today, still being filled in:</b> 23 periods are planned. Periods 1–9, the Stone Age through Champa, are live, with 56 entries. The rest are marked Coming.</li>
+            <li><b>Every entry is sourced:</b> each one is labelled Archaeology, Chronicles or Legend. More than 200 sources, from primary texts, museums, research papers, reference works and news.</li>
+            <li><b>Holograms, and the world around it:</b> simplified 3D reconstructions, including the Đông Sơn bronze drum and Cổ Loa citadel. Each period has a "Meanwhile, elsewhere" note, and 3 questions for a badge.</li>
+            <li><b>Labelled as made, or as found:</b> the period illustrations and the narration are AI-generated, and marked as such. Ambient sound is synthesised. The photos are real images from Wikimedia Commons, with a credit on each one.</li>
+          </ul>
+          <div class="scope mono">Periods 1–9 live <i>·</i> 56 entries <i>·</i> 23 periods planned <i>·</i> English &amp; Vietnamese</div>
+          <div class="chips"><span class="chip">Scrollytelling</span><span class="chip">3D map</span><span class="chip">English · Vietnamese</span><span class="chip">Sources</span><span class="chip">Quizzes</span></div>
+          <a class="visit" href="https://viet-su.vercel.app/" target="_blank" rel="noopener">Open Việt Sử Toàn Đồ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="coffee" class="more-products" data-cat-section="coffee">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Coffee</div>
+      <h2>One bag, <span class="serif">one Vietnamese farm.</span></h2>
+      <p class="sub">BaBeans is live. Pre-orders are open for the first 600 bags.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card" style="--c1:rgba(146,90,52,.62);--c2:rgba(196,154,108,.45);--c1s:#d4a574;--glow:rgba(146,90,52,.4)">
+        <div class="shot">
+          <div class="fb">☕</div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/babeans.jpg" alt="BaBeans in English: the homepage, “Distinct flavors. Known origins.”, with a bag of Natural Robusta from GOT Coffee" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">☕</div><div><h3>BaBeans</h3><small>One bag, one Vietnamese farm · for US buyers</small></div></div>
+            <span class="status dev">IN PROGRESS</span>
+          </div>
+          <p class="desc">A Vietnamese specialty coffee brand selling farm-named Robusta to buyers in the US. The line on the site is "Distinct flavors. Known origins." The first lot is six coffees from two farms, each in whole bean and ground.</p>
+          <ul class="feats">
+            <li><b>The first lot:</b> six coffees, 500 g each, from Ê Đê Café in Krông Ana, Đắk Lắk, and GOT Coffee in Bảo Lâm, Lâm Đồng. Each one comes whole bean and ground.</li>
+            <li><b>The bag says where it is from:</b> roasted in Vietnam, with the roast date and the farm named on every bag. It ships from the US.</li>
+            <li><b>Pre-order the first 600 bags:</b> reserve now and pay nothing today. The site has a farm-story section, and brewing guidance for drip, iced coffee and espresso.</li>
+            <li><b>Only claims it can document:</b> a claims policy that prints a claim only when it can be documented. Nguyen is on the founding team and built the website, on Vercel and Shopify.</li>
+          </ul>
+          <div class="scope mono">Pre-orders open <i>·</i> first 600 bags <i>·</i> 500 g <i>·</i> whole bean &amp; ground</div>
+          <div class="chips"><span class="chip">Vercel</span><span class="chip">Shopify</span><span class="chip">Pre-order</span><span class="chip">Robusta</span><span class="chip">Farm-named</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <section id="games" class="more-products" data-cat-section="games">
   <div class="wrap">
     <div class="rv">
@@ -1144,7 +1223,7 @@ if(!('IntersectionObserver' in window))document.querySelectorAll('.rv').forEach(
   var sections=[].slice.call(document.querySelectorAll('[data-cat-section]'));
   var live=document.getElementById('cat-live');
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var names={all:'all products',ai:'AI apps',learning:'Learning',games:'Games',tools:'Tools'};
+  var names={all:'all products',ai:'AI apps',learning:'Learning',history:'History',coffee:'Coffee',games:'Games',tools:'Tools'};
   function select(cat,opts){
     buttons.forEach(function(b){
       b.setAttribute('aria-pressed', b.getAttribute('data-cat')===cat ? 'true' : 'false');
