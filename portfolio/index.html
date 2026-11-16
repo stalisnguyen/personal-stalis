@@ -137,8 +137,8 @@ h2 .serif{font-style:italic;color:#c4b5fd}
 .frame .bar i{width:8px;height:8px;border-radius:50%;background:#3a3f4f}
 .frame .bar em{font-style:normal;font-size:10.5px;color:var(--dim);margin-left:8px;font-family:"JetBrains Mono",monospace}
 .frame img{top:24px;height:calc(100% - 24px)}
-.card.wide .shot{flex:1.25;aspect-ratio:auto;min-height:380px}
-.card.wide .shot img{object-position:left center}
+.card.wide .shot{flex:1.15 1 0;aspect-ratio:16/10;min-height:0;align-self:flex-start}
+.card.wide .shot img{object-position:left top}
 .info{padding:26px 28px 28px;display:flex;flex-direction:column;flex:1}
 .card.wide .info{flex:1;padding:40px}
 .head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
@@ -297,7 +297,7 @@ footer a:hover{color:var(--text)}
   .whygrid{grid-template-columns:1fr;gap:36px}
   .grid{grid-template-columns:1fr}
   .card.wide{flex-direction:column}
-  .card.wide .shot{min-height:0;aspect-ratio:16/10}
+  .card.wide .shot{flex:none;align-self:stretch;width:100%;min-height:0;aspect-ratio:16/10}
   .card.wide .info{padding:26px 28px 28px}
   .stats{grid-template-columns:repeat(2,1fr)}
   nav ul{display:none}
@@ -424,7 +424,6 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
 .more-body .grid.more-cards{margin-top:6px}
 @media (min-width:901px){
   .more-cards>.card:last-child:nth-child(odd){grid-column:1 / -1;width:calc((100% - 22px) / 2);justify-self:center}
-  #history .grid>.card,#coffee .grid>.card{grid-column:1 / -1;width:calc((100% - 22px) / 2);justify-self:center}
 }
 @media (max-width:560px){
   .more-cards .head{flex-wrap:wrap;row-gap:8px}
@@ -969,7 +968,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
     </div>
     <div class="grid">
 
-      <article class="card" style="--c1:rgba(232,168,74,.62);--c2:rgba(20,160,150,.4);--c1s:#f0b56a;--glow:rgba(232,168,74,.42)">
+      <article class="card wide" style="--c1:rgba(232,168,74,.62);--c2:rgba(20,160,150,.4);--c1s:#f0b56a;--glow:rgba(232,168,74,.42)">
         <div class="shot">
           <div class="fb">🗺️</div>
           <div class="frame"><div class="bar"><i></i><i></i><i></i><em>vietsutoando.com</em></div><img src="img/viet-su.jpg" alt="Việt Sử Toàn Đồ in English: the opening screen, “800,000 years told on one map,” with the Đông Sơn, Sa Huỳnh and Đồng Nai zones" loading="lazy" onerror="this.parentNode.remove()"></div>
@@ -1006,7 +1005,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
     </div>
     <div class="grid">
 
-      <article class="card" style="--c1:rgba(146,90,52,.62);--c2:rgba(196,154,108,.45);--c1s:#d4a574;--glow:rgba(146,90,52,.4)">
+      <article class="card wide" style="--c1:rgba(146,90,52,.62);--c2:rgba(196,154,108,.45);--c1s:#d4a574;--glow:rgba(146,90,52,.4)">
         <div class="shot">
           <div class="fb">☕</div>
           <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/babeans.jpg" alt="BaBeans in English: the homepage, “Distinct flavors. Known origins.”, with a bag of Natural Robusta from GOT Coffee" loading="lazy" onerror="this.parentNode.remove()"></div>
