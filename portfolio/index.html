@@ -455,6 +455,8 @@ details.card-more .feats{margin:4px 0 14px}
 details.card-more .scope{margin:0 0 14px}
 details.card-more .card-note{font-size:14.5px;color:var(--muted);line-height:1.5;margin:4px 0 12px}
 @media (max-width:900px){.card.wide .info{max-width:none}.learn-grid>.card:nth-child(n+4) .shot{aspect-ratio:16/10}}
+.visit-row{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px}
+.visit-row .visit{margin-top:0}
 </style>
 </head>
 <body>
@@ -497,7 +499,7 @@ details.card-more .card-note{font-size:14.5px;color:var(--muted);line-height:1.5
     <div class="stats rv">
       <div class="stat"><div class="k">10+ yrs</div><div class="v">Lifecycle &amp; Platform Strategy</div></div>
       <div class="stat"><div class="k">Ex-Binance</div><div class="v">Global lifecycle, CRM &amp; loyalty</div></div>
-      <div class="stat"><div class="k">12 products</div><div class="v">11 live, 1 in progress</div></div>
+      <div class="stat"><div class="k">13 products</div><div class="v">11 live, 2 in progress</div></div>
       <div class="stat"><div class="k">Web + iOS</div><div class="v">Echolis on the App Store</div></div>
     </div>
   </div>
@@ -521,7 +523,7 @@ details.card-more .card-note{font-size:14.5px;color:var(--muted);line-height:1.5
   </div>
   <div class="wrap">
     <div class="how rv">
-      <div class="how-h"><div class="eyebrow">How I build</div><p>One process for all twelve products. I own every step and work with AI agents on content, code and tests.</p></div>
+      <div class="how-h"><div class="eyebrow">How I build</div><p>One process for every product. I own every step and work with AI agents on content, code and tests.</p></div>
       <ol class="steps">
         <li><b>Define the user</b><span>Who they are, what they need and how progress is measured.</span></li>
         <li><b>Spec with guardrails</b><span>Answer validators and safety rules. Nothing ships until it passes.</span></li>
@@ -541,7 +543,7 @@ details.card-more .card-note{font-size:14.5px;color:var(--muted);line-height:1.5
       <button type="button" class="cat" data-cat="ai" aria-pressed="false">AI apps</button>
       <button type="button" class="cat" data-cat="learning" aria-pressed="false">Learning</button>
       <button type="button" class="cat" data-cat="history" aria-pressed="false">History</button>
-      <button type="button" class="cat" data-cat="coffee" aria-pressed="false">Coffee</button>
+      <button type="button" class="cat" data-cat="drinks" aria-pressed="false">Drinks</button>
       <button type="button" class="cat" data-cat="games" aria-pressed="false">Games</button>
       <button type="button" class="cat" data-cat="tools" aria-pressed="false">Tools</button>
     </div>
@@ -1009,19 +1011,19 @@ details.card-more .card-note{font-size:14.5px;color:var(--muted);line-height:1.5
   </div>
 </section>
 
-<section id="coffee" class="more-products" data-cat-section="coffee">
+<section id="drinks" class="more-products" data-cat-section="drinks">
   <div class="wrap">
     <div class="rv">
-      <div class="eyebrow">Coffee</div>
-      <h2>One bag, <span class="serif">one Vietnamese farm.</span></h2>
-      <p class="sub">BaBeans is in progress.</p>
+      <div class="eyebrow">Drinks</div>
+      <h2>Vietnamese coffee and matcha, <span class="serif">for US cups.</span></h2>
+      <p class="sub">BaBeans brings single-farm Vietnamese coffee to the US. Cội Matcha, from the same team, does the same for Vietnamese matcha. Both are in progress.</p>
     </div>
     <div class="grid">
 
-      <article class="card wide" style="--c1:rgba(146,90,52,.62);--c2:rgba(196,154,108,.45);--c1s:#d4a574;--glow:rgba(146,90,52,.4)">
+      <article class="card" style="--c1:rgba(146,90,52,.62);--c2:rgba(196,154,108,.45);--c1s:#d4a574;--glow:rgba(146,90,52,.4)">
         <div class="shot">
           <div class="fb">☕</div>
-          <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="img/babeans.jpg" alt="BaBeans in English: the homepage, “Distinct flavors. Known origins.”, with a bag of Natural Robusta from GOT Coffee" loading="lazy" onerror="this.parentNode.remove()"></div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><em>babeans.vercel.app</em></div><img src="img/babeans.jpg" alt="BaBeans in English: the homepage, “Distinct flavors. Known origins.”, with a bag of Natural Robusta from GOT Coffee" loading="lazy" onerror="this.parentNode.remove()"></div>
         </div>
         <div class="info">
           <div class="head">
@@ -1040,6 +1042,33 @@ details.card-more .card-note{font-size:14.5px;color:var(--muted);line-height:1.5
             <div class="scope mono">English · Vietnamese <i>·</i> Coffee library <i>·</i> Brew guide</div>
           </details>
           <div class="chips"><span class="chip">Farm-named</span><span class="chip">Robusta</span><span class="chip">Coffee library</span><span class="chip">Brew guide</span><span class="chip">English · Vietnamese</span></div>
+          <a class="visit" href="https://babeans.vercel.app/" target="_blank" rel="noopener">Open BaBeans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Cội Matcha -->
+      <article class="card" style="--c1:rgba(96,140,58,.6);--c2:rgba(214,200,160,.4);--c1s:#9bc06a;--glow:rgba(96,140,58,.42)">
+        <div class="shot">
+          <div class="fb">🍵</div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><em>coi-matcha.vercel.app</em></div><img src="img/coi-matcha.jpg" alt="Cội Matcha in English: the homepage, “Vietnamese matcha, from the root.”, with a Tây Bắc tin" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">🍵</div><div><h3>Cội Matcha</h3><small>Vietnamese matcha · for US cafés and kitchens</small></div></div>
+            <span class="status dev">IN PROGRESS</span>
+          </div>
+          <p class="desc">A premium matcha brand that presents Vietnam as a new origin for matcha. The leaf is grown, shaded and milled on Vietnam's tea hills and packed where it is made, for cafés and home kitchens in the US.</p>
+          <details class="card-more">
+            <summary>What's inside</summary>
+            <ul class="feats">
+              <li><b>Three origins, three leaves:</b> Tây Bắc for drinking straight, Trung Du for bowls and lattes, Tây Nguyên for lattes and iced drinks.</li>
+              <li><b>Choose by the cup, trust the grade:</b> four grades, Reserve, Origin, House and Barista, matched to straight, latte or baking use, from 20 g tins to 1 kg barista bags.</li>
+              <li><b>A name with a root:</b> "Cội" in a brush wordmark with a 源 seal, read together as "cội nguồn", after the saying "cây có cội, nước có nguồn".</li>
+              <li><b>Pre-order and cafés:</b> a pre-order flow for each product, a page for cafés, a ritual guide and the story of Vietnamese tea.</li>
+            </ul>
+          </details>
+          <div class="chips"><span class="chip">Premium matcha</span><span class="chip">Three origins</span><span class="chip">Four grades</span><span class="chip">Pre-order</span><span class="chip">For cafés</span></div>
+          <a class="visit" href="https://coi-matcha.vercel.app/" target="_blank" rel="noopener">Open Cội Matcha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
       </article>
 
@@ -1106,7 +1135,10 @@ details.card-more .card-note{font-size:14.5px;color:var(--muted);line-height:1.5
             <div class="scope mono">Released <i>·</i> all levels open</div>
           </details>
           <div class="chips"><span class="chip">Three.js</span><span class="chip">WebAudio</span><span class="chip">ElevenLabs</span><span class="chip">Vercel</span><span class="chip">EN / VI</span></div>
-          <a class="visit" href="https://stalisnguyen.itch.io/vit-van-phong" target="_blank" rel="noopener">Play on itch.io <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <div class="visit-row">
+            <a class="visit" href="https://stalisnguyen.itch.io/vit-van-phong" target="_blank" rel="noopener">Play on itch.io <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <a class="visit" href="https://office-time-together.vercel.app/" target="_blank" rel="noopener">Play in the browser <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </div>
         </div>
       </article>
 
@@ -1252,7 +1284,7 @@ if(!('IntersectionObserver' in window))document.querySelectorAll('.rv').forEach(
   var sections=[].slice.call(document.querySelectorAll('[data-cat-section]'));
   var live=document.getElementById('cat-live');
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var names={all:'all products',ai:'AI apps',learning:'Learning',history:'History',coffee:'Coffee',games:'Games',tools:'Tools'};
+  var names={all:'all products',ai:'AI apps',learning:'Learning',history:'History',drinks:'Drinks',games:'Games',tools:'Tools'};
   function select(cat,opts){
     buttons.forEach(function(b){
       b.setAttribute('aria-pressed', b.getAttribute('data-cat')===cat ? 'true' : 'false');
